@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'sha256-LBR6Oti1Is/PkrHbq5NUJzQkdoHMdL/8K7dU0gAj3Ws='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Torrent · Restaurante en Alcázar de San Juan</title>
+<meta name="description" content="Restaurante Torrent, C. Margarida Xirgu, 16, Alcázar de San Juan. Gambas al ajillo, tartar de atún, presa ibérica, menú del día y opciones para celíacos. 4,5 ★ en 734 reseñas. Reservas: 926 09 91 69.">
+<meta property="og:title" content="Torrent · Restaurante en Alcázar de San Juan">
+<meta property="og:description" content="Se levanta el telón: cocina con mucho mimo en la calle Margarida Xirgu, 16. 4,5 ★ en 734 reseñas.">
+<meta property="og:image" content="https://mkouyess00-collab.github.io/restaurante-torrent/img/fachada.webp">
+<meta name="theme-color" content="#0c1733">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c1733'/%3E%3Cpath d='M11 6v8m-2-8v6a2 2 0 0 0 4 0V6m-2 8v12M21 6c-2 0-3 2.5-3 5s1 4 3 4 3-1.5 3-4-1-5-3-5zm0 9v11' stroke='%23f4efe6' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Pinyon+Script&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/huevos-jamon.webp">
+<style>
+:root{
+  --noche:#0a1430; --azul:#13285e; --azul2:#1d3b85; --brillo:#3b5fb4;
+  --mesa:#c7ccd4; --mesa2:#aeb4be; --crema:#f4efe6; --papel:#fbf8f2; --tinta:#111522;
+  --oro:#c9a35b; --oro2:#e4c78a; --gris:#565c6b; --rojo:#b8392b;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--noche);overflow-x:clip}
+body{background:var(--crema);color:var(--tinta);font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--oro);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+section{position:relative}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.script{font-family:"Pinyon Script",cursive;font-weight:400}
+.eti{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--oro)}
+.eti::before{content:"";width:28px;height:1px;background:currentColor}
+.titulo{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(46px,6.4vw,104px);line-height:.95;letter-spacing:-.01em;text-transform:uppercase}
+.titulo em{font-family:"Pinyon Script",cursive;font-style:normal;text-transform:none;color:var(--oro);font-size:.72em;letter-spacing:0;padding:0 .08em}
+.intro .eti,.carta .eti,.resenas .eti{color:#7d5f22}
+.carta .titulo em{color:var(--azul2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;transition:transform .2s var(--ease),background .3s,color .3s}
+.btn:active{transform:scale(.95)}
+.btn-oro{background:var(--oro);color:var(--noche)}
+.btn-oro:hover{background:var(--oro2)}
+.btn-linea{border:1px solid currentColor}
+.btn-linea:hover{background:var(--crema);color:var(--noche)}
+.logo{display:inline-flex;align-items:center;gap:10px;font-family:Quicksand,sans-serif;font-weight:600;font-size:28px;letter-spacing:-.02em;line-height:1;color:#fff}
+.logo svg{width:30px;height:30px;flex:none}
+.logo .dam{width:26px;height:22px;background:repeating-conic-gradient(#fff 0 25%,transparent 0 50%) 0 0/7px 7px;opacity:.55;border-radius:2px}
+
+/* ====== CABECERA ====== */
+.cab{position:fixed;inset:0 0 auto;z-index:60;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px clamp(16px,3vw,40px);color:#fff;transition:background .4s,padding .4s}
+.cab.solida{background:rgba(10,20,48,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding-block:12px}
+.cab nav{display:flex;gap:clamp(14px,2.2vw,34px);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.cab nav a{opacity:.85;transition:opacity .3s}
+.cab nav a:hover{opacity:1}
+.cab .der{justify-self:end;display:flex;align-items:center;gap:14px}
+.estado{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.06em}
+.punto{width:8px;height:8px;border-radius:50%;background:#e0685a;flex:none}
+.punto.on{background:#4fd18b;box-shadow:0 0 0 0 rgba(79,209,139,.6);animation:latido 2s infinite}
+@keyframes latido{70%{box-shadow:0 0 0 9px rgba(79,209,139,0)}100%{box-shadow:0 0 0 0 rgba(79,209,139,0)}}
+.cab .tel{padding:10px 18px;border-radius:999px;background:var(--crema);color:var(--noche);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+
+/* ====== RAÍL LATERAL ====== */
+.rail{position:fixed;right:clamp(12px,2vw,28px);top:50%;transform:translateY(-50%);z-index:55;display:grid;gap:10px}
+.rail a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--tinta);color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.3);transition:transform .3s var(--ease),background .3s}
+.rail a:hover{transform:scale(1.1);background:var(--oro);color:var(--noche)}
+.rail svg{width:18px;height:18px}
+
+/* ====== HERO: TELÓN + BODEGÓN ====== */
+.hero{height:100svh;min-height:620px;overflow:hidden;isolation:isolate;background:var(--noche)}
+.terciopelo{position:absolute;inset:0 0 30%;z-index:-3;
+  background:
+   radial-gradient(60% 70% at 50% 18%,rgba(120,150,230,.22),transparent 70%),
+   linear-gradient(180deg,rgba(5,10,26,.75),rgba(5,10,26,0) 40%,rgba(5,10,26,.45)),
+   repeating-linear-gradient(90deg,#0b1838 0,#1a3678 2.2%,#2c4f9e 3.4%,#16306c 5%,#0a1634 7.6%,#122a62 9.2%,#24448e 10.4%,#0b1838 12.5%);
+  transform-origin:50% 0;animation:brisa 9s ease-in-out infinite alternate}
+@keyframes brisa{to{transform:scaleX(1.012) skewX(.4deg)}}
+.mesa-hero{position:absolute;inset:auto 0 0;height:56%;z-index:-2;background:linear-gradient(180deg,#d3d7de,#b6bcc6 70%,#a8aeb9);
+  clip-path:polygon(0 16%,62% 0,100% 7%,100% 100%,0 100%);box-shadow:inset 0 30px 60px rgba(0,0,0,.08)}
+.mesa-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(50% 40% at 50% 20%,rgba(255,255,255,.35),transparent 70%)}
+.cortina{position:absolute;top:0;bottom:0;width:51%;z-index:20;pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.4),transparent 20%,transparent 80%,rgba(0,0,0,.5)),repeating-linear-gradient(90deg,#0b1838 0,#1d3a80 3%,#2f53a3 4.6%,#14306c 7%,#0a1634 10%);
+  box-shadow:0 0 60px rgba(0,0,0,.6);display:none}
+.cortina.izq{left:0;transform-origin:0 0}
+.cortina.der{right:0;transform-origin:100% 0}
+.js .cortina{display:block}
+.subtitulo{position:absolute;top:clamp(92px,15svh,150px);left:0;right:0;text-align:center;color:#f2ead8;z-index:2}
+.subtitulo .script{font-size:clamp(34px,3.6vw,56px);line-height:1;display:block;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.subtitulo small{display:block;margin-top:10px;padding:0 16px;font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--oro2)}
+.plato{position:absolute;border-radius:50%;z-index:3;box-shadow:0 0 0 clamp(5px,.6vw,10px) #efece6,0 0 0 calc(clamp(5px,.6vw,10px) + 1px) rgba(0,0,0,.08),18px 28px 40px rgba(20,28,48,.38);overflow:hidden;background:#ddd}
+.plato img{width:100%;height:100%;object-fit:cover}
+.p1{width:clamp(200px,24vw,380px);aspect-ratio:1;left:6%;top:46%}
+.p2{width:clamp(150px,16vw,260px);aspect-ratio:1;left:34%;top:39%}
+.p3{width:clamp(170px,19vw,300px);aspect-ratio:1;left:57%;top:43%}
+.p4{width:clamp(110px,11vw,180px);aspect-ratio:1;left:79%;top:40%}
+.p5{width:clamp(120px,12.5vw,200px);aspect-ratio:1;left:79%;top:62%}
+.vaho{position:absolute;left:41.5%;top:30%;z-index:4;width:70px;height:120px;pointer-events:none}
+.vaho i{position:absolute;bottom:0;left:30%;width:22px;height:70px;border-radius:50%;background:rgba(255,255,255,.55);filter:blur(12px);animation:vaho 4.5s ease-in infinite}
+.vaho i:nth-child(2){left:52%;animation-delay:1.5s}
+.vaho i:nth-child(3){left:12%;animation-delay:3s}
+@keyframes vaho{0%{opacity:0;transform:translateY(20px) scale(.6)}30%{opacity:.8}100%{opacity:0;transform:translateY(-70px) scale(1.6) rotate(12deg)}}
+.cubierto{position:absolute;z-index:3;left:28%;top:74%;width:clamp(90px,9vw,150px);height:10px;border-radius:6px;background:linear-gradient(90deg,#b88a3e,#e8cf93 50%,#a77a33);transform:rotate(-28deg);box-shadow:6px 10px 14px rgba(0,0,0,.25)}
+.cubierto::before{content:"";position:absolute;right:-28px;top:-10px;width:36px;height:30px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#f1dba6,#b88a3e 70%)}
+.miga{position:absolute;z-index:3;width:10px;height:10px;border-radius:50%;background:#9b3b2a}
+.nombre{position:absolute;left:0;right:0;bottom:-.16em;z-index:6;text-align:center;font-family:"Instrument Serif",serif;font-size:clamp(110px,23vw,400px);line-height:.8;letter-spacing:-.01em;color:#fbf6ec;text-shadow:0 10px 50px rgba(10,20,48,.45);white-space:nowrap;pointer-events:none}
+.nombre span{display:inline-block}
+.hero .acc{position:absolute;left:clamp(16px,3vw,40px);top:50%;z-index:7;display:none}
+
+/* ====== FICHA ====== */
+.ficha{background:var(--noche);color:var(--crema);padding:34px 0}
+.ficha .fila{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.ficha .dato{border-left:1px solid rgba(244,239,230,.18);padding:6px 0 6px 20px}
+.ficha .dato b{display:block;font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(34px,3.6vw,52px);line-height:1}
+.ficha .dato span{font-size:13px;color:#b9bfd0;letter-spacing:.04em}
+.estrellas{color:var(--oro2);letter-spacing:2px;font-size:15px}
+
+/* ====== INTRO ====== */
+.intro{padding:clamp(90px,12vw,170px) 0}
+.intro .rejilla{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:center}
+.intro p.grande{font-family:"Instrument Serif",serif;font-size:clamp(32px,3.6vw,56px);line-height:1.08}
+.intro p.grande .pal{opacity:.15}
+.intro p.grande em{font-style:italic;color:var(--azul2)}
+.intro .lado{position:relative}
+.intro .lado img{border-radius:999px 999px 18px 18px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.intro .sello{position:absolute;left:-30px;bottom:30px;width:130px;height:130px;border-radius:50%;background:var(--oro);color:var(--noche);display:grid;place-items:center;text-align:center;font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;line-height:1.3;box-shadow:0 20px 40px rgba(0,0,0,.2)}
+.intro .sello b{display:block;font-family:"Instrument Serif",serif;font-weight:400;font-size:40px;letter-spacing:0;line-height:1}
+.servicios{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.servicios span{padding:9px 16px;border:1px solid rgba(17,21,34,.2);border-radius:999px;font-size:14px;font-weight:600}
+
+/* ====== CARTA ====== */
+.carta{padding:clamp(90px,11vw,150px) 0;background:var(--papel)}
+.carta .cabeza{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:60px}
+.carta .cabeza p{max-width:400px;color:#4a4f5c}
+.grupos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 80px}
+.grupo h3{font-family:"Pinyon Script",cursive;font-weight:400;font-size:44px;color:var(--azul2);line-height:1;margin-bottom:10px}
+.plt{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(17,21,34,.12);position:relative}
+.plt .n{font-family:"Instrument Serif",serif;font-size:clamp(26px,2.3vw,34px);line-height:1.05;text-transform:uppercase}
+.plt .i{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--gris)}
+.plt small{display:block;font-size:14px;color:#5b6070;margin-top:2px}
+.plt .tag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--noche);color:var(--crema);white-space:nowrap}
+.plt .tag.foto{background:transparent;color:var(--azul2);border:1px solid currentColor;cursor:pointer}
+.plt[data-foto]{cursor:pointer}
+.plt[data-foto]:hover .n{color:var(--azul2)}
+.carta .aviso{margin-top:56px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:26px 30px;border-radius:18px;background:var(--noche);color:var(--crema)}
+.carta .aviso p{max-width:640px}
+.flota{position:fixed;left:0;top:0;z-index:80;width:230px;aspect-ratio:1;border-radius:50%;overflow:hidden;pointer-events:none;opacity:0;box-shadow:0 0 0 8px #efece6,0 30px 50px rgba(0,0,0,.35)}
+.flota img{width:100%;height:100%;object-fit:cover}
+
+/* ====== EN ESCENA (galería horizontal) ====== */
+.escena{background:var(--noche);color:var(--crema);overflow:hidden}
+.escena .tope{padding:clamp(80px,9vw,110px) 0 32px}
+.escena .tope p{color:#b9bfd0;max-width:420px;margin-top:16px}
+.pista{display:flex;gap:clamp(18px,2.4vw,36px);padding:0 max(16px,calc((100vw - 1240px)/2)) clamp(80px,10vw,130px);width:max-content}
+.cuadro{width:min(clamp(240px,24vw,360px),40svh);flex:none;cursor:pointer}
+.cuadro .marco{border-radius:999px 999px 14px 14px;overflow:hidden;aspect-ratio:3/4;background:#1a2547}
+.cuadro img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.cuadro:hover img{transform:scale(1.06)}
+.cuadro .pie{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;gap:12px}
+.cuadro .pie b{font-family:"Instrument Serif",serif;font-weight:400;font-size:30px;text-transform:uppercase;line-height:1}
+.cuadro .pie span{font-family:"Pinyon Script",cursive;font-size:30px;color:var(--oro2)}
+.cuadro:nth-child(even){margin-top:40px}
+
+/* ====== COMEDOR ====== */
+.comedor{height:110svh;min-height:640px;overflow:hidden;isolation:isolate;color:#fff;display:grid;align-items:end}
+.comedor .foto{position:absolute;inset:0;z-index:-1}
+.comedor .foto img{width:100%;height:120%;object-fit:cover}
+.comedor::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(10,20,48,.25),rgba(10,20,48,.15) 40%,rgba(10,20,48,.88))}
+.comedor .cont{position:relative;z-index:1;padding-bottom:clamp(60px,9vw,120px)}
+.comedor .titulo{font-size:clamp(50px,8vw,140px);max-width:12ch}
+.comedor p{max-width:520px;margin-top:20px;color:#e6e9f2;font-size:18px}
+
+/* ====== RESEÑAS ====== */
+.resenas{padding:clamp(90px,11vw,150px) 0;background:var(--crema)}
+.resenas .rejilla{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(30px,6vw,90px);align-items:start}
+.nota{font-family:"Instrument Serif",serif;font-size:clamp(130px,16vw,240px);line-height:.8;color:var(--azul)}
+.nota small{font-size:.3em;color:var(--gris)}
+.resenas .lado p{margin-top:16px;color:#4a4f5c}
+.citas{display:grid;gap:22px}
+.cita{background:var(--papel);border-radius:22px;padding:30px 34px;box-shadow:0 20px 40px rgba(17,21,34,.07);position:relative}
+.cita:nth-child(2){margin-left:clamp(0px,6vw,80px)}
+.cita q{display:block;font-family:"Instrument Serif",serif;font-size:clamp(26px,2.4vw,36px);line-height:1.15;quotes:"«" "»"}
+.cita span{display:block;margin-top:14px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+
+/* ====== HORARIO + LLEGAR ====== */
+.visita{background:var(--noche);color:var(--crema);padding:clamp(90px,11vw,150px) 0 0}
+.visita .rejilla{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:start}
+.dias{list-style:none;margin-top:36px;border-top:1px solid rgba(244,239,230,.16)}
+.dia{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 4px;border-bottom:1px solid rgba(244,239,230,.16);transition:background .3s}
+.dia .d{font-family:"Instrument Serif",serif;font-size:30px;text-transform:uppercase;line-height:1}
+.dia .h{font-size:16px;font-weight:600;color:#cfd4e2;font-variant-numeric:tabular-nums}
+.dia.cerrado .h{color:#e88b7e}
+.dia.hoy{background:rgba(201,163,91,.14);padding-inline:14px;border-radius:12px;border-bottom-color:transparent}
+.dia.hoy .d::after{content:" hoy";font-family:"Pinyon Script",cursive;text-transform:none;color:var(--oro2);font-size:30px}
+.tarjeta{background:var(--crema);color:var(--tinta);border-radius:24px;padding:clamp(26px,3vw,40px);box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.tarjeta .logo{color:var(--noche);font-size:36px}
+.tarjeta .logo .dam{background:repeating-conic-gradient(var(--noche) 0 25%,transparent 0 50%) 0 0/7px 7px}
+.tarjeta dl{margin-top:22px;display:grid;gap:14px}
+.tarjeta dt{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gris)}
+.tarjeta dd{font-size:17px;font-weight:600}
+.tarjeta dd a{text-decoration:underline;text-underline-offset:3px}
+.tarjeta .acciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.tarjeta .btn-oro{background:var(--noche);color:var(--crema)}
+.tarjeta .btn-oro:hover{background:var(--azul2)}
+.tarjeta .btn-linea:hover{background:var(--noche);color:var(--crema)}
+.mapa{margin-top:clamp(60px,8vw,100px);height:min(520px,70svh);position:relative}
+.mapa iframe{width:100%;height:100%;border:0;filter:grayscale(.55) contrast(1.05) brightness(.92) hue-rotate(195deg) saturate(.6)}
+.pie{background:var(--noche);color:#9ea6bd;text-align:center;padding:60px 16px 110px;overflow:hidden}
+.pie .gigante{font-family:"Instrument Serif",serif;font-size:clamp(90px,22vw,360px);line-height:.85;color:transparent;-webkit-text-stroke:1px rgba(244,239,230,.35);white-space:nowrap}
+.pie p{font-size:13px;margin-top:20px}
+.pie a{color:var(--crema);text-decoration:underline}
+
+/* ====== BARRA MÓVIL ====== */
+.barra{display:none}
+
+/* ====== VISOR ====== */
+.visor{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:24px;background:rgba(6,12,30,.94);opacity:0;pointer-events:none;transition:opacity .4s}
+.visor.abierto{opacity:1;pointer-events:auto}
+.visor figure{display:grid;gap:14px;justify-items:center;transform:translateY(24px) scale(.96);transition:transform .6s var(--ease)}
+.visor.abierto figure{transform:none}
+.visor img{max-height:80svh;max-width:min(92vw,720px);width:auto;height:auto;border-radius:16px}
+.visor figcaption{font-family:"Instrument Serif",serif;font-size:30px;color:var(--crema);text-align:center;text-transform:uppercase}
+.visor .cerrar{position:absolute;top:18px;right:18px;width:48px;height:48px;border-radius:50%;border:1px solid var(--crema);color:var(--crema);font-size:20px}
+
+@media (max-width:980px){
+  .cab nav{display:none}
+  .cab{grid-template-columns:1fr auto}
+  .cab .logo-c{justify-self:start}
+  .ficha .fila{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:26px}
+  .intro .rejilla,.resenas .rejilla,.visita .rejilla{grid-template-columns:1fr}
+  .intro .lado{max-width:460px}
+  .grupos{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:700px){
+  body{font-size:16px}
+  .rail{display:none}
+  .cab{padding:12px 14px}
+  .cab .estado{display:none}
+  .logo{font-size:24px}
+  .terciopelo{inset:0 0 38%}
+  .mesa-hero{height:52%;clip-path:polygon(0 10%,70% 0,100% 5%,100% 100%,0 100%)}
+  .subtitulo{top:96px}
+  .subtitulo small{letter-spacing:.18em;font-size:11px}
+  .p1{width:52vw;left:-6%;top:50%}
+  .p2{width:36vw;left:44%;top:46%}
+  .p3{width:40vw;left:66%;top:60%}
+  .p4{width:26vw;left:78%;top:44%;display:none}
+  .p5{width:30vw;left:34%;top:68%}
+  .vaho{left:52%;top:36%}
+  .cubierto{display:none}
+  .nombre{font-size:27vw;bottom:62px}
+  .intro .sello{left:auto;right:-6px;width:110px;height:110px}
+  .plt{grid-template-columns:1fr auto}
+  .plt .i{display:none}
+  .carta .aviso{padding:22px}
+  .pista{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:70px;scrollbar-width:none}
+  .pista::-webkit-scrollbar{display:none}
+  .cuadro{width:72vw;scroll-snap-align:center}
+  .cuadro:nth-child(even){margin-top:0}
+  .cuadro .pie{justify-content:flex-start}
+  .comedor{height:90svh}
+  .cita{padding:24px}
+  .cita:nth-child(2){margin-left:0}
+  .dia .d{font-size:24px}
+  .dia.hoy .d::after{font-size:24px}
+  .barra{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:70;padding:6px;gap:6px;border-radius:999px;background:rgba(10,20,48,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 16px 36px rgba(0,0,0,.4)}
+  .barra a{flex:1;text-align:center;padding:12px 6px;border-radius:999px;color:var(--crema);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+  .barra a.prin{background:var(--oro);color:var(--noche)}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="cab" id="cab">
+  <nav aria-label="Principal">
+    <a href="#carta">Carta</a>
+    <a href="#escena">Platos</a>
+    <a href="#resenas">Reseñas</a>
+    <a href="#visita">Horario</a>
+  </nav>
+  <a href="#inicio" class="logo logo-c" aria-label="Torrent, inicio">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 6v8m-2-8v6a2 2 0 0 0 4 0V6m-2 8v12M21 6c-2 0-3 2.5-3 5s1 4 3 4 3-1.5 3-4-1-5-3-5zm0 9v11" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+    <span class="dam" aria-hidden="true"></span>torrent
+  </a>
+  <div class="der">
+    <span class="estado"><span class="punto" id="punto"></span><span id="estado">Horario</span></span>
+    <a class="tel" href="tel:+34926099169">Reservar</a>
+  </div>
+</header>
+
+<div class="rail" aria-label="Accesos rápidos">
+  <a href="tel:+34926099169" aria-label="Llamar al 926 09 91 69"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=39.3925132,-3.2226624" target="_blank" rel="noopener noreferrer" aria-label="Cómo llegar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></a>
+  <a href="https://www.facebook.com/torrentalcazar" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Torrent"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2.5V4.5H14c-2.5 0-4 1.6-4 4.2V11H7.5v3.5H10V21h3.5v-6.5H16l.5-3.5h-3V9c0-.6.4-1 1-1z"/></svg></a>
+</div>
+
+<main>
+<!-- 0. SE LEVANTA EL TELÓN -->
+<section class="hero" id="inicio" aria-label="Torrent">
+  <div class="terciopelo" aria-hidden="true"></div>
+  <div class="mesa-hero" aria-hidden="true"></div>
+  <div class="subtitulo">
+    <span class="script">mesa puesta en Alcázar</span>
+    <small>Restaurante · C. Margarida Xirgu, 16</small>
+  </div>
+  <div class="vaho" aria-hidden="true"><i></i><i></i><i></i></div>
+  <figure class="plato p1"><img src="img/huevos-jamon.webp" alt="Huevos rotos sobre jamón ibérico" fetchpriority="high"></figure>
+  <figure class="plato p2"><img src="img/gambas.webp" alt="Cazuela de gambas al ajillo"></figure>
+  <figure class="plato p3"><img src="img/carpaccio.webp" alt="Carpaccio con encurtidos"></figure>
+  <figure class="plato p4"><img src="img/postre.webp" alt="Postre de la casa con helado"></figure>
+  <figure class="plato p5"><img src="img/atun.webp" alt="Atún con sésamo y verduras"></figure>
+  <span class="cubierto" aria-hidden="true"></span>
+  <span class="miga" style="left:31%;top:62%" aria-hidden="true"></span>
+  <span class="miga" style="left:33%;top:65%;width:7px;height:7px;background:#3a5a2a" aria-hidden="true"></span>
+  <span class="miga" style="left:76%;top:76%;width:8px;height:8px" aria-hidden="true"></span>
+  <h1 class="nombre" data-nombre aria-label="Torrent">TORRENT</h1>
+  <div class="cortina izq" aria-hidden="true"></div>
+  <div class="cortina der" aria-hidden="true"></div>
+</section>
+
+<!-- 1. FICHA -->
+<section class="ficha" aria-label="Torrent en cifras">
+  <div class="wrap fila">
+    <div class="dato"><b data-cuenta="4.5" data-dec="1">4,5</b><span class="estrellas" aria-hidden="true">★★★★★</span> <span>valoración media</span></div>
+    <div class="dato"><b data-cuenta="734">734</b><span>reseñas en Google</span></div>
+    <div class="dato"><b>10–40 €</b><span>por persona</span></div>
+    <div class="dato"><b id="cierre">0:00</b><span id="cierre-txt">hora de cierre hoy</span></div>
+  </div>
+</section>
+
+<!-- 2. INTRO -->
+<section class="intro" id="casa">
+  <div class="wrap rejilla">
+    <div>
+      <span class="eti">La casa</span>
+      <p class="grande" id="manifiesto" style="margin-top:22px">En la calle Margarida Xirgu se levanta el telón cada día: una carta <em>variada</em>, menús del día muy trabajados y una sala que cuida a quien entra. Aquí se viene a <em>comer bien</em>, sin prisa.</p>
+      <div class="servicios" aria-label="Servicios">
+        <span>Comer en el local</span><span>A domicilio</span><span>Menú del día</span><span>Opciones para celíacos</span><span>Tapas</span>
+      </div>
+    </div>
+    <div class="lado">
+      <img src="img/fachada.webp" alt="Fachada del restaurante Torrent de noche, con el rótulo iluminado" loading="lazy" data-paralaje>
+      <div class="sello"><div><b>4,5</b>734 reseñas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CARTA -->
+<section class="carta" id="carta">
+  <div class="wrap">
+    <div class="cabeza">
+      <div>
+        <span class="eti">La carta</span>
+        <h2 class="titulo" data-linea style="margin-top:18px">Platos <em>que piden</em> repetir</h2>
+      </div>
+      <p>Lo más pedido de Torrent, según quienes ya se han sentado a su mesa. Pasa por encima de los platos con foto para verlos.</p>
+    </div>
+    <div class="grupos" id="grupos"></div>
+    <div class="aviso">
+      <p><b>Precios, arroces del día y menú del día:</b> cambian con el mercado. Pregúntalos en sala o llama y te los contamos.</p>
+      <a class="btn btn-oro" href="tel:+34926099169">926 09 91 69</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. EN ESCENA -->
+<section class="escena" id="escena">
+  <div class="wrap tope">
+    <span class="eti">En escena</span>
+    <h2 class="titulo" data-linea style="margin-top:18px">Del pase <em>a tu</em> mesa</h2>
+    <p>Fotos hechas por los clientes de Torrent. Sigue bajando para verlas y pulsa una para verla entera.</p>
+  </div>
+  <div class="pista" id="pista"></div>
+</section>
+
+<!-- 5. EL COMEDOR -->
+<section class="comedor" id="comedor">
+  <div class="foto"><img src="img/salon.webp" alt="Comedor de Torrent con mesas vestidas y luz cálida" loading="lazy" data-salon></div>
+  <div class="wrap cont">
+    <span class="eti">El comedor</span>
+    <h2 class="titulo" style="margin-top:18px">Cálido <em>y</em> acogedor</h2>
+    <p>Mesas vestidas, luz cálida y un equipo que está pendiente sin agobiar. También os echan una mano si preparáis una sorpresa.</p>
+  </div>
+</section>
+
+<!-- 6. RESEÑAS -->
+<section class="resenas" id="resenas">
+  <div class="wrap rejilla">
+    <div class="lado">
+      <span class="eti">Lo que se dice</span>
+      <div class="nota" style="margin-top:20px"><span data-cuenta="4.5" data-dec="1">4,5</span><small>/5</small></div>
+      <p>Media de 734 reseñas en Google Maps. Lo que más se repite: la carta, las tapas, las cenas y la presentación de los platos.</p>
+    </div>
+    <div class="citas">
+      <blockquote class="cita"><q>Buena cocina y camareros muy atentos y muy amables.</q><span>Reseña en Google</span></blockquote>
+      <blockquote class="cita"><q>Excelente lugar, buena comida, buen trato, comida para celíacos.</q><span>Reseña en Google</span></blockquote>
+      <blockquote class="cita"><q>La carta es variada y los menú del día son muy elaborados y de mucha calidad.</q><span>Reseña en Google</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- 7. HORARIO Y LLEGAR -->
+<section class="visita" id="visita">
+  <div class="wrap rejilla">
+    <div>
+      <span class="eti">Horario</span>
+      <h2 class="titulo" data-linea style="margin-top:18px">Se abre <em>el</em> telón</h2>
+      <ul class="dias" id="dias"></ul>
+    </div>
+    <div class="tarjeta" data-entra>
+      <div class="logo"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 6v8m-2-8v6a2 2 0 0 0 4 0V6m-2 8v12M21 6c-2 0-3 2.5-3 5s1 4 3 4 3-1.5 3-4-1-5-3-5zm0 9v11" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span class="dam" aria-hidden="true"></span>torrent</div>
+      <dl>
+        <div><dt>Dirección</dt><dd>C. Margarida Xirgu, 16<br>13600 Alcázar de San Juan (Ciudad Real)</dd></div>
+        <div><dt>Reservas y pedidos</dt><dd><a href="tel:+34926099169">926 09 91 69</a></dd></div>
+        <div><dt>Ahora mismo</dt><dd id="ahora">—</dd></div>
+        <div><dt>Síguenos</dt><dd><a href="https://www.facebook.com/torrentalcazar" target="_blank" rel="noopener noreferrer">facebook.com/torrentalcazar</a></dd></div>
+      </dl>
+      <div class="acciones">
+        <a class="btn btn-oro" href="tel:+34926099169">Llamar</a>
+        <a class="btn btn-linea" href="https://www.google.com/maps/dir/?api=1&amp;destination=39.3925132,-3.2226624" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+      </div>
+    </div>
+  </div>
+  <div class="mapa">
+    <iframe title="Mapa de Torrent en Alcázar de San Juan" src="https://www.google.com/maps?q=39.3925132,-3.2226624&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="gigante" aria-hidden="true">TORRENT</div>
+  <p>Restaurante Torrent · C. Margarida Xirgu, 16 · Alcázar de San Juan · <a href="tel:+34926099169">926 09 91 69</a> · Web hecha por Bramia</p>
+</footer>
+
+<nav class="barra" aria-label="Accesos móvil">
+  <a href="#carta">Carta</a>
+  <a href="#visita">Llegar</a>
+  <a class="prin" href="tel:+34926099169">Llamar</a>
+</nav>
+
+<div class="flota" id="flota" aria-hidden="true"><img src="img/gambas.webp" alt=""></div>
+
+<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Foto" hidden>
+  <button class="cerrar" aria-label="Cerrar">✕</button>
+  <figure><img src="img/gambas.webp" alt=""><figcaption></figcaption></figure>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" integrity="sha384-B2WBjDzEjJpYvhmi2UyEn7rektqkf5suS6sNoyyrf0EBAwBHdkiXxIlU0V5Ru2ed" crossorigin="anonymous"></script>
+<script>
+if (window.top !== window.self) { window.top.location = window.self.location; }
+(function () {
+  "use strict";
+  var reducido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var anima = !!(window.gsap && window.ScrollTrigger) && !reducido;
+  var movil = window.matchMedia("(max-width:700px)").matches;
+  var finoPuntero = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+  if (anima) document.documentElement.classList.add("js");
+
+  /* ---- Datos reales (ficha de Google Maps de Torrent) ---- */
+  var CARTA = [
+    { g: "Para compartir", p: [
+      { n: "Croquetón", d: "El más popular de la casa", tag: "Popular" },
+      { n: "Gambas al ajillo", d: "En cazuela, bien calientes", foto: "img/gambas.webp" },
+      { n: "Carpaccio", foto: "img/carpaccio.webp" },
+      { n: "Huevos rotos con jamón", foto: "img/huevos-jamon.webp" },
+      { n: "Gyozas de pollo" },
+      { n: "Antipasto" }
+    ] },
+    { g: "Del mar", p: [
+      { n: "Tartar de atún" },
+      { n: "Atún con sésamo", d: "Con verduras y su salsa", foto: "img/atun.webp" },
+      { n: "Calamar a la plancha", foto: "img/calamar.webp" },
+      { n: "Salmón" }
+    ] },
+    { g: "Carnes", p: [
+      { n: "Presa ibérica", foto: "img/presa.webp" },
+      { n: "Entrecot" }
+    ] },
+    { g: "Postres", p: [
+      { n: "Tarta de queso" },
+      { n: "Tarta de fresas", d: "Con frutos rojos" },
+      { n: "Naranja y piña preparada" },
+      { n: "Postre de la casa", d: "Con helado y caramelo", foto: "img/postre.webp" }
+    ] }
+  ];
+  var ESCENA = [
+    ["img/gambas.webp", "Gambas", "al ajillo"],
+    ["img/carpaccio.webp", "Carpaccio", "para abrir"],
+    ["img/huevos-jamon.webp", "Huevos rotos", "con jamón"],
+    ["img/calamar.webp", "Calamar", "a la plancha"],
+    ["img/presa.webp", "Presa", "ibérica"],
+    ["img/atun.webp", "Atún", "con sésamo"],
+    ["img/postre.webp", "Postre", "de la casa"]
+  ];
+  /* 0 domingo … 6 sábado; horas en decimal */
+  var H = { 0: [10.5, 24], 1: [9.5, 17], 2: null, 3: [9.5, 24], 4: [9.5, 24], 5: [9.5, 24], 6: [10.5, 24] };
+  var DIAS = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+
+  function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  function fmt(h) { var hh = Math.floor(h) % 24, mm = Math.round((h % 1) * 60); return hh + ":" + String(mm).padStart(2, "0"); }
+
+  /* ---- Carta ---- */
+  var grupos = document.getElementById("grupos"), num = 0;
+  CARTA.forEach(function (s) {
+    var g = el("div", "grupo"); g.appendChild(el("h3", null, s.g));
+    s.p.forEach(function (p) {
+      num++;
+      var f = el("div", "plt");
+      f.appendChild(el("span", "i", String(num).padStart(2, "0")));
+      var t = el("div"); t.appendChild(el("div", "n", p.n)); if (p.d) t.appendChild(el("small", null, p.d)); f.appendChild(t);
+      if (p.foto) { f.setAttribute("data-foto", p.foto); f.setAttribute("data-pie", p.n); f.setAttribute("tabindex", "0"); f.setAttribute("role", "button"); f.appendChild(el("span", "tag foto", "Ver foto")); }
+      else if (p.tag) f.appendChild(el("span", "tag", p.tag));
+      else f.appendChild(el("span"));
+      g.appendChild(f);
+    });
+    grupos.appendChild(g);
+  });
+
+  /* ---- En escena ---- */
+  var pista = document.getElementById("pista");
+  ESCENA.forEach(function (x) {
+    var c = el("article", "cuadro"); c.setAttribute("data-foto", x[0]); c.setAttribute("data-pie", x[1] + " " + x[2]);
+    var m = el("div", "marco"); var im = el("img"); im.src = x[0]; im.alt = x[1] + " " + x[2]; im.loading = "lazy"; m.appendChild(im);
+    var p = el("div", "pie"); p.appendChild(el("b", null, x[1])); p.appendChild(el("span", null, x[2]));
+    c.appendChild(m); c.appendChild(p); pista.appendChild(c);
+  });
+
+  /* ---- Horario y estado en directo ---- */
+  var ahora = new Date(), hoy = ahora.getDay(), hora = ahora.getHours() + ahora.getMinutes() / 60;
+  var ul = document.getElementById("dias");
+  [1, 2, 3, 4, 5, 6, 0].forEach(function (d) {
+    var li = el("li", "dia" + (H[d] ? "" : " cerrado") + (d === hoy ? " hoy" : ""));
+    li.appendChild(el("span", "d", DIAS[d]));
+    li.appendChild(el("span", "h", H[d] ? fmt(H[d][0]) + " – " + fmt(H[d][1]) : "Cerrado"));
+    ul.appendChild(li);
+  });
+  var estado = document.getElementById("estado"), punto = document.getElementById("punto"), ahoraTxt = document.getElementById("ahora");
+  var cierre = document.getElementById("cierre"), cierreTxt = document.getElementById("cierre-txt");
+  var abierto = H[hoy] && hora >= H[hoy][0] && hora < H[hoy][1];
+  if (abierto) {
+    estado.textContent = "Abierto · cierra a las " + fmt(H[hoy][1]); punto.classList.add("on");
+    ahoraTxt.textContent = "Abierto hasta las " + fmt(H[hoy][1]);
+    cierre.textContent = fmt(H[hoy][1]); cierreTxt.textContent = "abierto hoy hasta";
+  } else {
+    var k = (H[hoy] && hora < H[hoy][0]) ? 0 : 1; while (!H[(hoy + k) % 7]) k++;
+    var dd = (hoy + k) % 7, cuando = k === 0 ? "hoy" : k === 1 ? "mañana" : "el " + DIAS[dd].toLowerCase();
+    estado.textContent = "Cerrado · abre " + cuando + " a las " + fmt(H[dd][0]);
+    ahoraTxt.textContent = "Cerrado. Abrimos " + cuando + " a las " + fmt(H[dd][0]);
+    cierre.textContent = fmt(H[dd][0]); cierreTxt.textContent = "abre " + cuando;
+  }
+
+  /* ---- Visor de fotos ---- */
+  var visor = document.getElementById("visor"), vImg = visor.querySelector("img"), vPie = visor.querySelector("figcaption"), ultimo = null;
+  function abrir(src, pie, o) { ultimo = o; vImg.src = src; vImg.alt = pie; vPie.textContent = pie; visor.hidden = false; requestAnimationFrame(function () { visor.classList.add("abierto"); }); visor.querySelector(".cerrar").focus(); if (window.__lenis) window.__lenis.stop(); }
+  function cerrar() { visor.classList.remove("abierto"); setTimeout(function () { visor.hidden = true; }, 400); if (window.__lenis) window.__lenis.start(); if (ultimo && ultimo.focus) ultimo.focus(); }
+  visor.addEventListener("click", function (e) { if (e.target === visor || e.target.closest(".cerrar")) cerrar(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !visor.hidden) cerrar();
+    if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches(".plt[data-foto]")) { e.preventDefault(); abrir(e.target.getAttribute("data-foto"), e.target.getAttribute("data-pie"), e.target); }
+  });
+  document.addEventListener("click", function (e) { var t = e.target.closest("[data-foto]"); if (t) { e.preventDefault(); abrir(t.getAttribute("data-foto"), t.getAttribute("data-pie") || "", t); } });
+
+  /* ---- Cabecera sólida al bajar ---- */
+  var cab = document.getElementById("cab");
+  function cabecera() { cab.classList.toggle("solida", window.scrollY > window.innerHeight * .6); }
+  window.addEventListener("scroll", cabecera, { passive: true }); cabecera();
+
+  if (!anima) return;
+
+  /* ================= MOVIMIENTO ================= */
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis = null;
+  if (window.Lenis) {
+    lenis = new Lenis({ lerp: .09 }); window.__lenis = lenis;
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(function (t) { lenis.raf(t * 1000); }); gsap.ticker.lagSmoothing(0);
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener("click", function (e) { var d = document.querySelector(a.getAttribute("href")); if (!d) return; e.preventDefault(); lenis.scrollTo(d, { duration: 1.4 }); });
+    });
+  }
+
+  /* Hero: el telón se abre, los platos caen sobre la mesa y sube el nombre */
+  var nom = document.querySelector("[data-nombre]");
+  nom.innerHTML = nom.textContent.split("").map(function (c) { return "<span>" + c + "</span>"; }).join("");
+  if (lenis) lenis.stop();
+  gsap.timeline({ defaults: { ease: "power3.out" }, onComplete: function () { if (lenis) lenis.start(); } })
+    .to(".cortina.izq", { xPercent: -100, skewX: 6, duration: 1.8, ease: "power3.inOut" }, .2)
+    .to(".cortina.der", { xPercent: 100, skewX: -6, duration: 1.8, ease: "power3.inOut" }, .2)
+    .set(".cortina", { display: "none" })
+    .from(".terciopelo", { scale: 1.12, filter: "brightness(.4)", duration: 2.2 }, .2)
+    .from(".subtitulo > *", { opacity: 0, y: 24, duration: .9, stagger: .15 }, 1.1)
+    .from(".plato", { y: -window.innerHeight * .7, rotation: function (i) { return i % 2 ? 40 : -40; }, scale: .7, opacity: 0, duration: 1.1, stagger: .12, ease: "back.out(1.1)" }, 1.0)
+    .from(".cubierto, .miga", { opacity: 0, y: -40, duration: .6, stagger: .05 }, 1.7)
+    .from(nom.children, { yPercent: 110, opacity: 0, duration: 1, stagger: .06, ease: "expo.out" }, 1.4)
+    .from(".cab, .rail, .barra", { opacity: 0, y: -20, duration: .8 }, 2);
+  /* Al bajar: la cámara se acerca a la mesa */
+  gsap.timeline({ scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } })
+    .to(".terciopelo", { yPercent: 18, ease: "none" }, 0)
+    .to(".nombre", { yPercent: 30, opacity: .2, ease: "none" }, 0)
+    .to(".subtitulo", { yPercent: -60, opacity: 0, ease: "none" }, 0)
+    .to(".p1", { y: -60, rotation: -8, ease: "none" }, 0)
+    .to(".p2", { y: -120, rotation: 10, ease: "none" }, 0)
+    .to(".p3", { y: -90, rotation: -6, ease: "none" }, 0)
+    .to(".p4", { y: -160, ease: "none" }, 0)
+    .to(".p5", { y: -40, ease: "none" }, 0);
+  /* Los platos siguen al ratón, muy suave */
+  if (finoPuntero) {
+    var hero = document.querySelector(".hero");
+    var movs = gsap.utils.toArray(".plato").map(function (p, i) { var f = (i + 1) * 4; return { x: gsap.quickTo(p, "x", { duration: 1.2, ease: "power3" }), f: f }; });
+    hero.addEventListener("pointermove", function (e) { var r = (e.clientX / window.innerWidth - .5); movs.forEach(function (m) { m.x(r * m.f * 3); }); });
+  }
+
+  /* Cifras que cuentan */
+  gsap.utils.toArray("[data-cuenta]").forEach(function (b) {
+    var fin = parseFloat(b.getAttribute("data-cuenta")), dec = +b.getAttribute("data-dec") || 0, o = { v: 0 };
+    gsap.to(o, { v: fin, duration: 1.6, ease: "power2.out", scrollTrigger: { trigger: b, start: "top 90%" }, onUpdate: function () { b.textContent = o.v.toFixed(dec).replace(".", ","); } });
+  });
+
+  /* Intro: las palabras se encienden al leer */
+  var m = document.getElementById("manifiesto"), partes = [];
+  m.childNodes.forEach(function (n) {
+    var envolver = n.nodeType === 3 ? null : n.tagName.toLowerCase();
+    n.textContent.split(/(\s+)/).forEach(function (w) {
+      if (!w.trim()) { partes.push(w); return; }
+      partes.push(envolver ? "<" + envolver + ' class="pal">' + w + "</" + envolver + ">" : '<span class="pal">' + w + "</span>");
+    });
+  });
+  m.innerHTML = partes.join("");
+  gsap.to(m.querySelectorAll(".pal"), { opacity: 1, stagger: .1, ease: "none", scrollTrigger: { trigger: m, start: "top 78%", end: "bottom 50%", scrub: true } });
+  gsap.from(".servicios span", { opacity: 0, y: 20, stagger: .06, duration: .6, scrollTrigger: { trigger: ".servicios", start: "top 90%" } });
+  gsap.fromTo(".intro .lado img", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 1.4, ease: "power4.inOut", scrollTrigger: { trigger: ".intro .lado", start: "top 80%" } });
+  gsap.from(".intro .sello", { scale: 0, rotation: -120, duration: 1, ease: "back.out(1.6)", scrollTrigger: { trigger: ".intro .lado", start: "top 55%" } });
+
+  /* Títulos: se descubren como un telón */
+  gsap.utils.toArray("[data-linea]").forEach(function (h) {
+    gsap.fromTo(h, { clipPath: "inset(0 50% 0 50%)", opacity: .2 }, { clipPath: "inset(0 0% 0 0%)", opacity: 1, duration: 1.3, ease: "power4.inOut", scrollTrigger: { trigger: h, start: "top 85%" } });
+  });
+
+  /* Carta: las líneas entran una a una y la foto flota con el ratón */
+  gsap.utils.toArray(".grupo").forEach(function (g) {
+    gsap.from(g.querySelectorAll("h3, .plt"), { opacity: 0, y: 30, stagger: .06, duration: .7, scrollTrigger: { trigger: g, start: "top 82%" } });
+  });
+  if (finoPuntero) {
+    var flota = document.getElementById("flota"), fImg = flota.querySelector("img");
+    var fx = gsap.quickTo(flota, "x", { duration: .5, ease: "power3" }), fy = gsap.quickTo(flota, "y", { duration: .5, ease: "power3" });
+    document.querySelectorAll(".plt[data-foto]").forEach(function (p) {
+      p.addEventListener("mouseenter", function () { fImg.src = p.getAttribute("data-foto"); gsap.to(flota, { opacity: 1, scale: 1, rotation: 0, duration: .4 }); });
+      p.addEventListener("mouseleave", function () { gsap.to(flota, { opacity: 0, scale: .6, rotation: -10, duration: .3 }); });
+      p.addEventListener("mousemove", function (e) { fx(e.clientX + 30); fy(e.clientY - 115); });
+    });
+    gsap.set(flota, { scale: .6 });
+  }
+
+  /* En escena: la fila de platos avanza con el scroll (en móvil, deslizar) */
+  if (!movil) {
+    var dist = function () { return pista.scrollWidth - window.innerWidth; };
+    gsap.to(pista, { x: function () { return -dist(); }, ease: "none", scrollTrigger: { trigger: ".escena", start: "top top", end: function () { return "+=" + dist(); }, pin: true, scrub: 1, invalidateOnRefresh: true } });
+  }
+  gsap.from(".cuadro", { opacity: 0, y: 80, stagger: .08, duration: 1, scrollTrigger: { trigger: "#pista", start: "top 85%" } });
+
+  /* Comedor: la foto se abre y se mueve más despacio */
+  gsap.fromTo(".comedor .foto", { clipPath: "inset(12% 10% 12% 10% round 30px)" }, { clipPath: "inset(0% 0% 0% 0% round 0px)", ease: "none", scrollTrigger: { trigger: ".comedor", start: "top bottom", end: "top top", scrub: true } });
+  gsap.fromTo("[data-salon]", { yPercent: -12 }, { yPercent: 0, ease: "none", scrollTrigger: { trigger: ".comedor", start: "top bottom", end: "bottom top", scrub: true } });
+  gsap.from(".comedor .cont > *", { opacity: 0, y: 40, stagger: .12, duration: 1, scrollTrigger: { trigger: ".comedor .cont", start: "top 85%" } });
+
+  /* Reseñas */
+  gsap.from(".cita", { opacity: 0, x: 60, rotation: 2, stagger: .15, duration: 1, scrollTrigger: { trigger: ".citas", start: "top 80%" } });
+
+  /* Horario: los días se encienden en fila; la tarjeta cae */
+  gsap.from(".dia", { opacity: 0, x: -30, stagger: .06, duration: .6, scrollTrigger: { trigger: "#dias", start: "top 85%" } });
+  gsap.from(".tarjeta", { opacity: 0, y: 80, rotation: -3, duration: 1.1, ease: "back.out(1.3)", scrollTrigger: { trigger: ".tarjeta", start: "top 85%" } });
+  gsap.from(".pie .gigante", { yPercent: 60, opacity: 0, duration: 1.4, scrollTrigger: { trigger: ".pie", start: "top 95%" } });
+})();
+</script>
+</body>
+</html>
