@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'sha256-YraoOfthAiPNqI5ZpW7gwGCUln2iIy99aVI2pMLPgCM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'sha256-hBQbyPInRMxOVg/C8nPs8Zo7beCD+Vm5UZbPja3dLPA='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Torrent · Restaurante en Alcázar de San Juan</title>
 <meta name="description" content="Restaurante Torrent, C. Margarida Xirgu, 16, Alcázar de San Juan. Gambas al ajillo, tartar de atún, presa ibérica, menú del día y opciones para celíacos. 4,5 ★ en 734 reseñas. Reservas: 926 09 91 69.">
@@ -602,7 +602,7 @@ if (window.top !== window.self) { window.top.location = window.self.location; }
     " c+=vec3(.28,.42,.85)*sh*.38*ao;",
     " c*=mix(.3,1.,smoothstep(0.,.25,y))*mix(1.,.55,smoothstep(.72,1.,y));",
     " c*=.72+.55*exp(-pow((x-.5)/.42,2.)-pow((y-.12)/.7,2.));",
-    " if(uM>.5){c*=mix(1.,.5,smoothstep(.93,1.,s));float hem=1.-.012*(1.+sin(ph));a*=1.-smoothstep(hem-.003,hem,y);}",
+    " if(uM>.5)c*=mix(1.,.5,smoothstep(.93,1.,s));",
     " else c*=.82;",
     " c+=(rnd(gl_FragCoord.xy)-.5)*.035;",
     " gl_FragColor=vec4(c*a,a);",
