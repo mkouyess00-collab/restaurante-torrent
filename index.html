@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'sha256-A1NURCwNOb3LuufttpRxWpoFZ6Su4oGZvxtePsudTX8='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net 'sha256-YraoOfthAiPNqI5ZpW7gwGCUln2iIy99aVI2pMLPgCM='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Torrent · Restaurante en Alcázar de San Juan</title>
 <meta name="description" content="Restaurante Torrent, C. Margarida Xirgu, 16, Alcázar de San Juan. Gambas al ajillo, tartar de atún, presa ibérica, menú del día y opciones para celíacos. 4,5 ★ en 734 reseñas. Reservas: 926 09 91 69.">
@@ -578,10 +578,10 @@ if (window.top !== window.self) { window.top.location = window.self.location; }
     " float x=uv.x,y=uv.y,s=x,e=0.,sd=0.,a=1.;",
     " if(uM>.5){",
     "  bool r=x>.5;float xs=r?1.-x:x;sd=r?3.7:0.;",
-    /* cada altura se abre con su propio retraso: el bajo va detrás de la barra */
-    "  float lp=clamp(uP*1.45-y*.45,0.,1.);",
+    /* la cortina se desliza recta hacia su lado */
+    "  float lp=clamp(uP,0.,1.);",
     "  e=lp<.5?4.*lp*lp*lp:1.-pow(-2.*lp+2.,3.)/2.;",
-    "  float W=mix(.505,uE,e)+.016*sin(lp*6.2832)*(1.-lp);",
+    "  float W=mix(.505,uE,e);",
     "  float px=1.5/uR.x;",
     "  if(xs>W+px){float sh=.5*exp(-(xs-W)*28.)*step(.001,W);gl_FragColor=vec4(0.,0.,0.,sh);return;}",
     "  a=1.-smoothstep(W-px,W+px,xs);",
@@ -667,8 +667,8 @@ if (window.top !== window.self) { window.top.location = window.self.location; }
   nom.innerHTML = nom.textContent.split("").map(function (c) { return "<span>" + c + "</span>"; }).join("");
   if (lenis) lenis.stop();
   gsap.timeline({ defaults: { ease: "power3.out" }, onComplete: function () { if (lenis) lenis.start(); } })
-    /* Se abre el telón: cada cortina se recoge hacia su lado, arriba primero y el bajo detrás; la tela se amontona y oscila al llegar */
-    .to(vT ? vT.st : {}, { p: 1, duration: 3.4, ease: "none", onUpdate: function () { if (vT) { vT.st.t = performance.now() / 1000; vT.pinta(); } }, onComplete: function () { if (vT && movil) cvT.remove(); } }, .2)
+    /* Se abre el telón: cada cortina se recoge recta hacia su lado y la tela se amontona en pliegues */
+    .to(vT ? vT.st : {}, { p: 1, duration: 3, ease: "none", onUpdate: function () { if (vT) { vT.st.t = performance.now() / 1000; vT.pinta(); } }, onComplete: function () { if (vT && movil) cvT.remove(); } }, .2)
     .to(".sombra-ini", { opacity: 0, duration: 2.6, ease: "power1.inOut" }, .4)
     .from(".terciopelo", { scale: 1.06, duration: 3.2, ease: "power2.out" }, .3)
     .from(".subtitulo > *", { opacity: 0, y: 24, duration: 1, stagger: .15 }, 1.6)
